@@ -34,7 +34,6 @@ function App() {
     let total_grade = 0;
     let UW_grade = 0
     const calc = [...classes].filter(clas => clas.grade !== 'Pass' && clas.grade !== 'Fail')
-    console.log(calc)
     calc.forEach(cls => {
       total_credits += cls.creditAmount
       total_grade += (cls.gradeNum * cls.creditAmount)
@@ -87,7 +86,7 @@ function App() {
       return <h1 className='test textColor'>Your GPA is: {GP}</h1>
     }
     return <>
-    <h1 className='textColor'>Your weighted GPA is {WGPAValue} and unweighted gpa is {UWGPAValue}</h1>
+    <h1 className='textColor'>Weighted GPA: {WGPAValue} Unweighted GPA: {UWGPAValue}</h1>
     </>
   }
 

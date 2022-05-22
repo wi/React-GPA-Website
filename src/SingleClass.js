@@ -11,7 +11,6 @@ export default function SingleClass({class_, removeClass, setClasses}) {
       setClasses((prevClasses) => {
         const newData = [...prevClasses]
         newData.find(cls => cls.id === class_.id)[`${key}`] = value
-        console.log(newData)
         return newData
       })
 
@@ -27,7 +26,6 @@ export default function SingleClass({class_, removeClass, setClasses}) {
         const newData = [...prevClasses]
         newData.find(cls => cls.id === class_.id)['grade'] = grade;
         newData.find(cls => cls.id === class_.id)['gradeNum'] = Number(numGrade);
-        console.log(newData)
         return newData
       })
     }
