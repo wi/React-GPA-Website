@@ -96,8 +96,8 @@ function App() {
       <br></br>
       <ClassesList classes={classes} removeClass={removeClass} setClasses={setClasses}/>
       <hr></hr>
-      <button onClick={addClass} className='add-button'>Add Class</button>
       {displayGPAs()}
+      <button onClick={addClass} className='add-button'>Add Class</button>
       <br></br>
     </div>
   );
