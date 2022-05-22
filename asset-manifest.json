@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/React-GPA-Website/static/css/main.09b9cb90.css",
+    "main.js": "/React-GPA-Website/static/js/main.2e3db7dd.js",
+    "index.html": "/React-GPA-Website/index.html",
+    "main.09b9cb90.css.map": "/React-GPA-Website/static/css/main.09b9cb90.css.map",
+    "main.2e3db7dd.js.map": "/React-GPA-Website/static/js/main.2e3db7dd.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.09b9cb90.css",
+    "static/js/main.2e3db7dd.js"
+  ]
+}
