@@ -1,4 +1,7 @@
 .textColor {
+    position:relative;
+    right: 0%;
+    top: -40px;
     color: #000000;
 }
 
@@ -30,13 +33,19 @@
 }
 
 .add-button {
+    position:relative;
+    right: -88.3%;
+    top: 20px;
     background-color: #4CAF50;
     border: none;
     color: white;
-    padding: 15px 32px;
+    border: none;
+    color: white;
     text-align: center;
+    text-decoration: none;
     display: inline-block;
     font-size: 16px;
+    height: 35px;
 }
 
 .small-br {
