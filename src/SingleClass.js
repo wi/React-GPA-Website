@@ -44,13 +44,14 @@ export default function SingleClass({class_, removeClass, setClasses}) {
 
     function getRandomClass() {
       const choices = ['History', 'Math', 'Chemistry', 'Physics', 'Computer Scince', 'Advisory', 'AP Physics', 'AP Computer Scinece', 'AP History', 'AP Chemistry', 'IB Computer Science', 'IB Physics', 'IB Chemistry', 'IB History']
-      return choices[Math.floor(Math.random()*choices.length)];
+      class_.random = choices[Math.floor(Math.random()*choices.length)];
+      return class_.random
     }
 
   return (
     <div>
         <label htmlFor="ClassName">Class Name: </label>
-        <input type="text" name="GPA" id="ClassName" placeholder={getRandomClass()} onInput={handleClassNameChange} ></input>
+        <input type="text" name="GPA" id="ClassName" placeholder={(class_.random === '') ? getRandomClass() : class_.random} onInput={handleClassNameChange} ></input>
     
         <br className='small-br'></br>
         <label htmlFor="LetterGrade">Class Grade: </label>

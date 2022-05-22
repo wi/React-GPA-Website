@@ -8,10 +8,10 @@ const localStorageWGPA = 'WGPADATA'
 const localstorageUWGPA = 'UWGPADATA'
 
 function defaultClasses() {
-  return [{id: uuidv4(), name: '', grade: 'A', gradeNum: 4.0, type: 'Regular', creditAmount: 1}, 
-          {id: uuidv4(), name: '', grade: 'A', gradeNum: 4.0, type: 'Regular', creditAmount: 1}, 
-          {id: uuidv4(), name: '', grade: 'A', gradeNum: 4.0, type: 'Regular', creditAmount: 1}, 
-          {id: uuidv4(), name: '', grade: 'A', gradeNum: 4.0, type: 'Regular', creditAmount: 1}]
+  return [{id: uuidv4(), name: '', grade: 'A', gradeNum: 4.0, type: 'Regular', creditAmount: 1, random: ''}, 
+          {id: uuidv4(), name: '', grade: 'A', gradeNum: 4.0, type: 'Regular', creditAmount: 1, random: ''}, 
+          {id: uuidv4(), name: '', grade: 'A', gradeNum: 4.0, type: 'Regular', creditAmount: 1, random: ''}, 
+          {id: uuidv4(), name: '', grade: 'A', gradeNum: 4.0, type: 'Regular', creditAmount: 1, random: ''}]
 }
 
 function App() {
@@ -70,7 +70,7 @@ function App() {
   function addClass() {
     setClasses((prevClasses) => {
       console.log('added a class...')
-      return [...prevClasses, {id: uuidv4(), name: '', grade: 'A', gradeNum: 4.0, type: 'Regular', creditAmount: 1}]
+      return [...prevClasses, {id: uuidv4(), name: '', grade: 'A', gradeNum: 4.0, type: 'Regular', creditAmount: 1, random: ''}]
     })
 
   }
