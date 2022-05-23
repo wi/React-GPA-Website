@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/React-GPA-Website/static/css/main.36aea675.css",
-    "main.js": "/React-GPA-Website/static/js/main.6c6a74af.js",
+    "main.js": "/React-GPA-Website/static/js/main.be4f6c95.js",
     "index.html": "/React-GPA-Website/index.html",
     "main.36aea675.css.map": "/React-GPA-Website/static/css/main.36aea675.css.map",
-    "main.6c6a74af.js.map": "/React-GPA-Website/static/js/main.6c6a74af.js.map"
+    "main.be4f6c95.js.map": "/React-GPA-Website/static/js/main.be4f6c95.js.map"
   },
   "entrypoints": [
     "static/css/main.36aea675.css",
-    "static/js/main.6c6a74af.js"
+    "static/js/main.be4f6c95.js"
   ]
 }
