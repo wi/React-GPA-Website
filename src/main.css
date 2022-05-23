@@ -30,11 +30,12 @@
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
+    width: 100px;
 }
 
 .add-button {
     position:relative;
-    right: -88.3%;
+    right: -87.5%;
     top: -50px;
     background-color: #4CAF50;
     border: none;
@@ -46,6 +47,7 @@
     display: inline-block;
     font-size: 16px;
     height: 35px;
+    width: 100px;
 }
 
 .small-br {

@@ -71,7 +71,6 @@ function App() {
       console.log('added a class...')
       return [...prevClasses, {id: uuidv4(), name: '', grade: 'A', gradeNum: 4.0, type: 'Regular', creditAmount: 1, random: ''}]
     })
-
   }
 
   function removeClass(id) {
@@ -85,9 +84,8 @@ function App() {
       const GP = (WGPAValue === 'NaN') ? 'no classes added!' : WGPAValue
       return <h1 className='test textColor'>Your GPA is: {GP}</h1>
     }
-    return <>
-    <h1 className='textColor'>Weighted GPA: {WGPAValue} Unweighted GPA: {UWGPAValue}</h1>
-    </>
+    return <h1 className='textColor'>Weighted GPA: {WGPAValue} Unweighted GPA: {UWGPAValue}</h1>
+
   }
 
   return (
