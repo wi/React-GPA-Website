@@ -33,7 +33,7 @@ function App() {
     let total_credits = 0;
     let total_grade = 0;
     let UW_grade = 0
-    const calc = [...classes].filter(clas => clas.grade !== 'Pass' && clas.grade !== 'Fail')
+    const calc = [...classes].filter(clas => clas.grade !== 'Pass' && clas.grade !== 'Fail' && clas.grade !== 'F')
     calc.forEach(cls => {
       total_credits += cls.creditAmount
       total_grade += (cls.gradeNum * cls.creditAmount)
