@@ -33,15 +33,17 @@ function App() {
     let total_credits = 0;
     let total_grade = 0;
     let UW_grade = 0
-    const calc = [...classes].filter(clas => clas.grade !== 'Pass' && clas.grade !== 'Fail' && clas.grade !== 'F')
+    const calc = [...classes].filter(clas => clas.grade !== 'Pass')
     calc.forEach(cls => {
       total_credits += cls.creditAmount
       total_grade += (cls.gradeNum * cls.creditAmount)
       UW_grade += (cls.gradeNum * cls.creditAmount)
-      if(cls.type === "IB/AP/DE") {
-        total_grade += 1;
-      } else if (cls.type === "Honors (HN)") {
-        total_grade += .5
+      if(cls.grade !== 'Fail' && cls.grade !== 'F') {
+        if(cls.type === "IB/AP/DE") {
+          total_grade += 1;
+        } else if (cls.type === "Honors (HN)") {
+          total_grade += .5
+        }
       }
     })
 

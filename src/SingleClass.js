@@ -77,7 +77,7 @@ export default function SingleClass({class_, removeClass, setClasses}) {
         <br className='small-br'></br>
         <label  htmlFor="ClassType">Class Type: </label>
         <select id="ClassType" onChange={handleClassChange}>
-          <option value="Regular" selected disabled hidden>{class_.type}</option>
+          <option value={class_.type} selected disabled hidden>{class_.type}</option>
           <option value="Regular">Regular</option>
           <option value="Honors (HN)">Honors (HN)</option>
           <option value="IB/AP/DE">IB/AP/DE</option>
