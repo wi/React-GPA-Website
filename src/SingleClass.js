@@ -46,8 +46,9 @@ export default function SingleClass({class_, removeClass, setClasses}) {
       return class_.random
     }
 
+
   return (
-    <div>
+    <div id={class_.id}>
         <label htmlFor="ClassName">Class Name: </label>
         <input type="text" name="GPA" id="ClassName" placeholder={(class_.random === '') ? getRandomClass() : class_.random} onInput={handleClassNameChange} ></input>
     
@@ -71,8 +72,8 @@ export default function SingleClass({class_, removeClass, setClasses}) {
         </select>
 
         <br className='small-br'></br>
-        <label htmlFor="CreditAmount" className='single-label'>Credit Amount: </label>
-        <input type="text" name="Credit Amount" id="CreditAmount" maxLength="2" defaultValue={class_.creditAmount} style={{width: 14}} onInput={handleCreditAmountChange} placeholder="1" className='single-input'></input>
+        <label htmlFor="CreditAmount">Credit Amount: </label>
+        <input type="text" name="Credit Amount" id="CreditAmount" maxLength="2" defaultValue={class_.creditAmount} style={{width: 27}} onInput={handleCreditAmountChange} placeholder="1"></input>
     
         <br className='small-br'></br>
         <label  htmlFor="ClassType">Class Type: </label>

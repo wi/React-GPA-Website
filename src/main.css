@@ -1,10 +1,10 @@
-.textColor {
-    position:relative;
+@import url('https://www.w3schools.com/w3css/4/w3.css');
+.cool-h1 {
+    text-align: center;
     right: 0%;
     top: 5px;
     color: #000000;
 }
-
 
 .center {
     margin: auto;
@@ -13,14 +13,29 @@
     padding: 10px;
 }
 
-.display-block {
-    display: block;
-    
+.right-div{
+    margin: auto;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 25%;
+    border: 3px solid #747C7A;
+}
+
+.left-div{
+    margin: auto;
+    position: absolute;
+    overflow: hidden;
+    top: 0px;
+    left: 0px;
+    width: 25%;
+    border: 3px solid #747C7A;
+    padding: 10px;
 }
 
 .delete-button {
-    position:relative;
-    right: -70%;
+    position: relative;
+    float: right;
     top: -60px;
     height: 35px;
     background-color: #f44336;
@@ -28,16 +43,15 @@
     color: white;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
     font-size: 16px;
-    width: 100px;
+    width: 120px;
 }
 
 .add-button {
-    position:relative;
-    right: -87.5%;
-    top: -50px;
+    position: fixed;
     background-color: #4CAF50;
+    bottom: 0px;
+    right: 0px;
     border: none;
     color: white;
     border: none;
@@ -47,7 +61,6 @@
     display: inline-block;
     font-size: 16px;
     height: 35px;
-    width: 100px;
 }
 
 .small-br {
