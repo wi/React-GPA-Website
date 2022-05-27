@@ -38,8 +38,8 @@ function App() {
     console.log('Some data changed...');
     let total_credits = 0;
     let total_grade = (cumulative.gpa * cumulative.creditAmount);
-    let UW_grade = 0
-    const calc = [...classes].filter(clas => clas.grade !== 'Pass')
+    let UW_grade = 0;
+    const calc = [...classes].filter(clas => clas.grade !== 'Pass');
     calc.forEach(cls => {
       total_credits += cls.creditAmount
       total_grade += (cls.gradeNum * cls.creditAmount)
@@ -51,10 +51,10 @@ function App() {
           total_grade += .5
         }
       }
-    })
+    });
 
-    updateWGPA((total_grade/(total_credits + cumulative.creditAmount)))
-    updateUWGPA((UW_grade/total_credits))
+    updateWGPA((total_grade/(total_credits + cumulative.creditAmount)));
+    updateUWGPA((UW_grade/total_credits));
     localStorage.setItem(localStorageKey, JSON.stringify(classes));
   }, [classes, cumulative])
 
@@ -81,28 +81,28 @@ function App() {
 
   function addClass() {
     setClasses((prevClasses) => {
-      console.log('added a class...')
-      return [...prevClasses, {id: uuidv4(), name: '', grade: 'A', gradeNum: 4.0, type: 'Regular', creditAmount: 1, random: ''}]
+      console.log('added a class...');
+      return [...prevClasses, {id: uuidv4(), name: '', grade: 'A', gradeNum: 4.0, type: 'Regular', creditAmount: 1, random: ''}];
     })
   }
 
   function removeClass(id) {
-    console.log('Removed a class...')
-    const newClasses = classes.filter(class_ => class_.id !== id)
-    setClasses(newClasses)
+    console.log('Removed a class...');
+    const newClasses = classes.filter(class_ => class_.id !== id);
+    setClasses(newClasses);
   }
 
   function handleCumulative() {
     let currGPA = document.getElementById('CurrGPA').value;
     let currCredits = document.getElementById('CurrCredits').value;
-    if(currGPA === '' || currCredits === '') return setCumulative({gpa: 0.0, creditAmount: 0})
+    if(currGPA === '' || currCredits === '') return setCumulative({gpa: 0.0, creditAmount: 0});
     if(!(/^[+-]?\d+(\.\d+)?$/.test(currCredits)) || currCredits === '') return;
     if(!(/^[+-]?\d+(\.\d+)?$/.test(currGPA)) || currGPA === '') return;
     currGPA = Number(currGPA);
-    currCredits = Number(currCredits)
-    currGPA = (currGPA <= 5) ? currGPA : 5
-    currGPA = (currGPA >= 0) ? currGPA : 0
-    setCumulative({gpa: currGPA, creditAmount: currCredits})
+    currCredits = Number(currCredits);
+    currGPA = (currGPA <= 5) ? currGPA : 5;
+    currGPA = (currGPA >= 0) ? currGPA : 0;
+    setCumulative({gpa: currGPA, creditAmount: currCredits});
   }
 
   function displayGPAs() {

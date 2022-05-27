@@ -32,7 +32,7 @@ export default function SingleClass({class_, removeClass, setClasses}) {
 
     function handleCreditAmountChange(event) {
       const credit = event.target.value;
-      if(!(/^[0-9]*$/.test(credit)) || credit === '') return;
+      if(!(/^[+-]?\d+(\.\d+)?$/.test(credit)) || credit === '') return;
       rerender('creditAmount', Number(credit))
     }
 
@@ -73,7 +73,7 @@ export default function SingleClass({class_, removeClass, setClasses}) {
 
         <br className='small-br'></br>
         <label htmlFor="CreditAmount">Credit Amount: </label>
-        <input type="text" name="Credit Amount" id="CreditAmount" maxLength="2" defaultValue={class_.creditAmount} style={{width: 27}} onInput={handleCreditAmountChange} placeholder="1"></input>
+        <input type="text" name="Credit Amount" id="CreditAmount" maxLength="3" defaultValue={class_.creditAmount} style={{width: 36}} onInput={handleCreditAmountChange} placeholder="1"></input>
     
         <br className='small-br'></br>
         <label  htmlFor="ClassType">Class Type: </label>
