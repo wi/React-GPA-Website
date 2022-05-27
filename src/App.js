@@ -23,8 +23,6 @@ function App() {
   const [height, setHeight] = useState(window.innerHeight);
 
 
-
-
   useEffect(() => {
     const storage = JSON.parse(localStorage.getItem(localStorageKey));
     const oldWGPA = localStorage.getItem(localStorageWGPA);
@@ -98,7 +96,7 @@ function App() {
     let currGPA = document.getElementById('CurrGPA').value;
     let currCredits = document.getElementById('CurrCredits').value;
     if(currGPA === '' || currCredits === '') return setCumulative({gpa: 0.0, creditAmount: 0})
-    if(!(/^[0-9]*$/.test(currCredits)) || currCredits === '') return;
+    if(!(/^[+-]?\d+(\.\d+)?$/.test(currCredits)) || currCredits === '') return;
     if(!(/^[+-]?\d+(\.\d+)?$/.test(currGPA)) || currGPA === '') return;
     currGPA = Number(currGPA);
     currCredits = Number(currCredits)
@@ -126,7 +124,7 @@ function App() {
         <h1 className='cool-h1'>Cumulative Stats</h1>
         <br></br>
         <input type="text" name="GPA" id="CurrGPA" placeholder='Current GPA (Weighted)' onInput={handleCumulative} maxLength="5"></input>
-        <input type="text" name="GPA" id="CurrCredits" placeholder='Credit Amount' onInput={handleCumulative} maxLength="2"></input>
+        <input type="text" name="GPA" id="CurrCredits" placeholder='Credit Amount' onInput={handleCumulative} maxLength="3"></input>
       </div>
     
       <div className='center' id='center-div' style={{height: classes.length*140+200 > height*.5 ? classes.length*140+200 : height*.5}}>
